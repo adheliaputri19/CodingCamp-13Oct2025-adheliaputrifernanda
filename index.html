@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do List</h1>
+            <p class="description">Organize your tasks and stay productive</p>
+        </header>
+        
+        <section class="todo-form">
+            <form id="todoForm">
+                <div class="form-group">
+                    <label for="todoInput">Task Description</label>
+                    <input type="text" id="todoInput" placeholder="What do you need to do?">
+                    <div class="error" id="taskError">Please enter a task description</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dateInput">Due Date</label>
+                    <input type="date" id="dateInput">
+                    <div class="error" id="dateError">Please select a valid date</div>
+                </div>
+                
+                <button type="submit" class="btn">Add Task</button>
+            </form>
+        </section>
+        
+        <section class="filter-section">
+            <h2>Your Tasks</h2>
+            <select id="filterSelect" class="filter-select">
+                <option value="all">All Tasks</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="overdue">Overdue</option>
+            </select>
+        </section>
+        
+        <section class="todo-list-container">
+            <ul class="todo-list" id="todoList">
+            </ul>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
